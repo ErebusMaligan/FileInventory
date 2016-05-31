@@ -1,6 +1,6 @@
 <project name="FileInventory" basedir=".">
 	<property name="CommonBuild" value="../ant/common.ant"/> 
 	<property name="this.project" value="${ant.project.name}" />
-	<property name="main-class"		value="fnmcore.app.FreeNASMonitor" />
+	<property name="main-class"		value="application.FileInventory" />
 	<ant target="deployed" antfile="${CommonBuild}" inheritAll="true"/>
 </project>

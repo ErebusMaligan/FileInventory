@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="/libs/SQLiteModule.jar"/>
 	<classpathentry kind="lib" path="/libs/JUtils.jar"/>
 	<classpathentry kind="lib" path="/libs/TerminalWindow.jar"/>
+	<classpathentry kind="lib" path="/libs/sqlite-jdbc/sqlite-jdbc-3.7.15-M1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
