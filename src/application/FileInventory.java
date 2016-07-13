@@ -37,6 +37,7 @@ public class FileInventory {
 		//		DataSourceProxy.getInstance().getCache().printCache();
 		
 		startUI();
+		System.out.println( "Database Loaded..." );
 	}
 
 	public static void startUI() {

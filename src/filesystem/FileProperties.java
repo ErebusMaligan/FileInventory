@@ -41,14 +41,14 @@ public class FileProperties {
 	
 	public static final String[] MOVIE_TYPES = new String[] { "iso", "mkv", "avi", "mp4", "divx", "m4v" };
 	
-	public static final String[] EPISODE_TYPES = new String[] { "flv", "mkv", "mp4", "avi", "vob" };
+	public static final String[] EPISODE_TYPES = new String[] { "flv", "mkv", "mp4", "avi", "vob", "m4v" };
 	
 	private static DecimalFormat format = new DecimalFormat( "0.000" );
 	
 	public static boolean isType( String name, String[] types ) {
 		boolean ret = false;
 		for ( String s : types ) {
-			if ( name.endsWith( s ) ) {
+			if ( name.endsWith( s ) || name.endsWith( s.toLowerCase() ) || name.endsWith( s.toUpperCase() ) ) {
 				ret = true;
 				break;
 			}
