@@ -31,11 +31,6 @@ public abstract class ScanAsTypeDialog extends OKCancelDialog {
 	
 	private JComboBox<String> unc = new JComboBox<String>();
 	
-	/**
-	 * @param owner
-	 * @param title
-	 * @param modal
-	 */
 	public ScanAsTypeDialog( Frame owner ) {
 		super( owner, "Scan Content as Movies", true );
 		setSize( 400, 140 );

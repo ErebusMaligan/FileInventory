@@ -13,10 +13,7 @@ import db.element.Row;
 public class TVSeasonNode extends RowNode {
 
 	private static final long serialVersionUID = 1L;
-	
-	/**
-	 * @param row
-	 */
+
 	public TVSeasonNode( Row row ) {
 		super( row );
 		name = NetUtils.stripUNCEnd( row.getColumn( DBN.UNC ).toString() );

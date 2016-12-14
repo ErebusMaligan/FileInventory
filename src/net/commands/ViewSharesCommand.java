@@ -10,10 +10,6 @@ import process.StandardProcess;
  */
 public class ViewSharesCommand extends ProcessCommand {
 
-	/**
-	 * @param command
-	 * @param recv
-	 */
 	public ViewSharesCommand( String command, StandardProcess process ) {
 		super( command, process );
 	}

@@ -14,10 +14,7 @@ public class TVEpisodeNode extends RowNode {
 	private static final long serialVersionUID = 1L;
 	
 	private String type;
-	
-	/**
-	 * @param row
-	 */
+
 	public TVEpisodeNode( Row row ) {
 		super( row );
 		size = (float)( row.getColumn( DBN.SIZE ).getValue() );

@@ -34,11 +34,6 @@ public class TreeExportOptionsDialog extends OKCancelDialog {
 	
 	private Map<String, BooleanVariable> map = new HashMap<String, BooleanVariable>();
 	
-	/**
-	 * @param owner
-	 * @param title
-	 * @param modal
-	 */
 	public TreeExportOptionsDialog( Frame owner, String[] columns ) {
 		super( owner, "Choose Export Options", true );
 		this.setSize( new Dimension( 425, 275 ) );

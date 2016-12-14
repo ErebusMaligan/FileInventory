@@ -8,9 +8,7 @@ import java.util.Vector;
  * @author Daniel J. Rivers
  *         2013
  *
- * Created: Nov 29, 2013, 5:54:21 AM 
- * @param <K>
- * @param <V>
+ * Created: Nov 29, 2013, 5:54:21 AM
  */
 public abstract class GenericRecord extends HashMap<String, String> {
 

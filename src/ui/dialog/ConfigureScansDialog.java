@@ -50,11 +50,6 @@ public class ConfigureScansDialog extends OKCancelDialog implements CacheListene
 	
 	private JList<Row> list = new JList<Row>( model );
 	
-	/**
-	 * @param owner
-	 * @param title
-	 * @param modal
-	 */
 	public ConfigureScansDialog( Frame owner ) {
 		super( owner, "Configure Scans",  true );
 		this.setLayout( new BorderLayout() );

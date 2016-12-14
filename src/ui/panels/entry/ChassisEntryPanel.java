@@ -20,10 +20,7 @@ public class ChassisEntryPanel extends EntryPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
-	/**
-	 * @param table
-	 */
+
 	public ChassisEntryPanel() {
 		super( DBN.CHASSIS );
 	}

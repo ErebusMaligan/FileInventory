@@ -10,10 +10,6 @@ import process.StandardProcess;
  */
 public class ViewDeviceCommand extends ProcessCommand {
 
-	/**
-	 * @param command
-	 * @param recv
-	 */
 	public ViewDeviceCommand( String command, StandardProcess process ) {
 		super( command, process );
 	}

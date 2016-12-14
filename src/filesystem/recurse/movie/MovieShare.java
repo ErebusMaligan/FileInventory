@@ -16,9 +16,6 @@ public class MovieShare extends FileRecord {
 
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @param file
-	 */
 	public MovieShare( File file, String UNC ) {
 		super( file );
 		for ( GenericRecord c : children ) {

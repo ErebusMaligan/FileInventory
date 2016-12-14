@@ -20,9 +20,6 @@ public class Movie extends FileRecord {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	/**
-	 * @param file
-	 */
 	public Movie( File file ) {
 		super( file );
 		put( DBN.DISC_COUNT, Integer.toString( children.size() ) );
