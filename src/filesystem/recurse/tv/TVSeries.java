@@ -31,7 +31,7 @@ public class TVSeries extends FileRecord {
 		List<File> arr = new ArrayList<File>();
 		List<String> names = new ArrayList<String>();
 		for ( File f : file.listFiles() ) {
-			if ( f.isDirectory() ) {
+			if ( f.isDirectory() && f.list().length > 0 ) {
 				if ( f.getName().contains( "Season" ) || f.getName().contains( "season" ) || f.getName().contains( "SEASON" ) ) {
 					arr.add( f );
 					names.add( f.getName() );

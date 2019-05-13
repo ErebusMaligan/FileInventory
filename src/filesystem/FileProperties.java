@@ -41,7 +41,7 @@ public class FileProperties {
 	
 	public static final String[] MOVIE_TYPES = new String[] { "iso", "mkv", "avi", "mp4", "divx", "m4v" };
 	
-	public static final String[] EPISODE_TYPES = new String[] { "flv", "mkv", "mp4", "avi", "vob", "m4v" };
+	public static final String[] EPISODE_TYPES = new String[] { "flv", "mkv", "mp4", "avi", "vob", "m4v", "webm" };
 	
 	private static DecimalFormat format = new DecimalFormat( "0.000" );
 	

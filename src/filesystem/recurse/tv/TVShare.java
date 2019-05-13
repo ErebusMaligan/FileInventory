@@ -25,7 +25,7 @@ public class TVShare extends FileRecord {
 	protected void createChildren() {
 		System.out.println( file.getAbsolutePath() );
 		for ( File f : file.listFiles() ) {
-			if ( f.isDirectory() && !f.isHidden() ) {
+			if ( f.isDirectory() && !f.isHidden() && f.list().length > 0 ) {
 				addChild( new TVSeries( f, optional ) );
 			}
 		}
