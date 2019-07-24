@@ -55,10 +55,15 @@ public class NetUtils {
 		CacheHandler sourceH = cache.getHandler( DBN.NETWORK_SOURCE );
 		CacheHandler shareH = cache.getHandler( DBN.NETWORK_SHARE );
 		List<String> systems = n.getRemoteSystemListing();
-		if ( systems != null ) {
-			for ( String s : n.getRemoteSystemListing() ) {
-				scanSystem( s, n, sourceH, shareH );
+		if ( systems == null ) {
+			systems = new ArrayList<>();
+			for ( Row r : sourceH.getAllRows() ) {
+				String u = (String)r.getColumn( DBN.UNC ).getValue();
+				systems.add( u );
 			}
+		}
+		for ( String s : systems ) {
+			scanSystem( s, n, sourceH, shareH );
 		}
 		System.out.println( "Completed Network Scan." );
 	}

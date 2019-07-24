@@ -1,18 +1,19 @@
 package ui.panels.chassis;
 
-import gui.dialog.OKCancelDialog;
-import gui.entry.ComboBoxEntry;
-import gui.props.variable.StringVariable;
-
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Frame;
+import java.util.Collections;
+import java.util.List;
 
 import javax.swing.JPanel;
 
-import statics.GU;
 import db.access.DBAccess;
 import db.element.Row;
+import gui.dialog.OKCancelDialog;
+import gui.entry.ComboBoxEntry;
+import gui.props.variable.StringVariable;
+import statics.GU;
 
 /**
  * @author Daniel J. Rivers
@@ -36,7 +37,9 @@ public class ShareSelectionDialog extends OKCancelDialog {
 		JPanel center = new JPanel();
 		ComboBoxEntry c = new ComboBoxEntry( "Share:", s, new Dimension[] { GU.FIELD, GU.LONG } );
 		c.addContent( "NONE" );
-		for ( String s : DBAccess.getAvaialableShares() ) {
+		List<String> shares = DBAccess.getAvaialableShares();
+		Collections.sort( shares );
+		for ( String s : shares ) {
 			c.addContent( s );
 		}
 		center.add( c );
