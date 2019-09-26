@@ -82,19 +82,14 @@ public class DBAccess {
 	}
 	
 	public static void handleShareDiskMapping( Row disk, Row share ) {
-		if ( share == null ) {
 			List<ColumnData> cd = new ArrayList<>();
 			cd.add( disk.getColumn( DBN.SERIAL ).clone() );
-			Row r = getHandler( DBN.SHARE_DISK ).getRow( cd );
-			if ( r != null ) {
-				getHandler( DBN.SHARE_DISK ).delete( r );
-			}
-		} else {
-			List<ColumnData> cd = new ArrayList<>();
+			List<Row> rows = getHandler( DBN.SHARE_DISK ).getRows( cd );
+			rows.forEach( r -> getHandler( DBN.SHARE_DISK ).delete( r ) );
+			cd = new ArrayList<>();
 			cd.add( share.getColumn( DBN.UNC ).clone() );
 			cd.add( disk.getColumn( DBN.SERIAL ).clone() );
 			getHandler( DBN.SHARE_DISK ).merge( new Row( cd ) );
-		}
 	}
 	
 	public static void handleDiskChassisMapping( Row disk, Row chassis, int bay ) {
