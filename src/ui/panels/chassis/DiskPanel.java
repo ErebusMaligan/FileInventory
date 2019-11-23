@@ -98,9 +98,9 @@ public class DiskPanel extends JPanel {
 			Row share = sp.getShare();
 			if ( share != null ) {
 				File f = new File( share.getColumn( DBN.UNC ).toString() );
-				long offset = 1073741824;
-				long max = f.getTotalSpace() / offset;
-				long free = f.getUsableSpace() / offset;
+				long offset = 1024 * 1024 * 1024;
+				double max = f.getTotalSpace() / offset;
+				double free = f.getFreeSpace() / offset;
 				double used = max - free;
 				int percent = (int)(used / max * 100);
 				JProgressBar b = new JProgressBar( 0, (int)max );
