@@ -35,6 +35,7 @@ public abstract class ProcessCommand implements ProcessStreamSiphon, Callable<Li
 		this.process = process;
 		errors.add( "error" );
 		errors.add( "unknown" );
+		errors.add( "no entries" );
 	}
 	
 	public List<String> call() {
