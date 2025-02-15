@@ -1,9 +1,9 @@
 apply plugin: 'java'
 
 dependencies {
-	compile fileTree( dir: "../libs", include: ['DBCache.jar', 'JUtils.jar', 'SpreadSheetUtils.jar', 'SQLiteModule.jar', 'TerminalWindow.jar'] )
-	compile fileTree( dir: "../libs/Apache/POI", include: '*.jar' )
-	compile fileTree( dir: "../libs/sqlite-jdbc", include: '*.jar' )
+	implementation fileTree( dir: "../libs", include: ['DBCache.jar', 'JUtils.jar', 'SpreadSheetUtils.jar', 'SQLiteModule.jar', 'TerminalWindow.jar'] )
+	implementation fileTree( dir: "../libs/Apache/POI", include: '*.jar' )
+	implementation fileTree( dir: "../libs/sqlite-jdbc", include: '*.jar' )
 }
 
 ext {
